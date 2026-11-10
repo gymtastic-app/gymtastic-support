@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{{ page.title | default: site.title | escape }}</title>
+    <style>
+      :root { color-scheme: light dark; font: 16px/1.65 system-ui, sans-serif; }
+      body { margin: 0; background: Canvas; color: CanvasText; }
+      header, main, footer { box-sizing: border-box; width: min(100% - 2rem, 48rem); margin-inline: auto; }
+      header { padding-block: 1.5rem; border-bottom: 1px solid color-mix(in srgb, CanvasText 18%, transparent); }
+      header a { margin-right: 1rem; }
+      main { min-height: 65vh; padding-block: 1rem 3rem; }
+      footer { padding-block: 1rem 2rem; border-top: 1px solid color-mix(in srgb, CanvasText 18%, transparent); font-size: .9rem; }
+      a { color: LinkText; }
+      h1, h2 { line-height: 1.2; }
+      h1 { margin-top: 1.25rem; }
+      :focus-visible { outline: 3px solid Highlight; outline-offset: 3px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="{{ '/' | relative_url }}"><strong>Gymtastic</strong></a>
+      <nav aria-label="Main navigation">
+        <a href="{{ '/support/' | relative_url }}">Support</a>
+        <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      This site is hosted by GitHub. See
+      <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement">GitHub's Privacy Statement</a>.
+    </footer>
+  </body>
+</html>
