@@ -3,3 +3,6 @@ description: Support and privacy information for Gymtastic.
 url: https://gymtastic-app.github.io
 baseurl: /gymtastic-support
 markdown: kramdown
+app_store_id: "6832960888"
+# Add App Store Connect campaign parameters (pt=<provider token>&ct=site) to attribute site visits.
+app_store_url: https://apps.apple.com/app/id6832960888
